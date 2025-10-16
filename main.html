@@ -4,13 +4,72 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+	<style>
+
+		 .invalid-feedback {
+      color: red;
+      font-size: 0.9em;
+      display: none;
+		 }
+		input:invalid + .invalid-feedback,
+    select:invalid + .invalid-feedback {
+      display: block;
+
+
+		input[type="checkbox"]:invalid + label + .invalid-feedback {
+  display: block;
+}
+	</style>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
+<form>
+	<label for="first-name-input"> First Name </label>
+	<input type="text" id="first-name-input" required >
+	<div class="invalid-feedback">Please enter a valid first name.</div>
 
+	<br>
+	<label for="last-name-input"> Last Name </label>
+	<input type="text" id="last-name-input" required >
+	<div class="invalid-feedback">Please enter a valid last name.</div>
+
+	<br>
+	 <label for="college-input">College Name</label>
+    <input type="text" id="college-input" name="college" required>
+    <div class="invalid-feedback">Please enter your college name.</div>
+
+  <br>
+    <label for="roll-no-input">Roll Number</label>
+    <input type="number" id="roll-no-input" name="roll-no" required>
+    <div class="invalid-feedback">Please enter a valid roll number.</div>
+
+<br>
+	<label for="graduation-year">Graduation Year</label>
+
+    <select id="graduation-year" name="graduation-year" required>
+      <option value="">Select year</option>
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+    </select>
+    <div class="invalid-feedback">Please select your graduation year.</div>
+		
+	</select>
+
+<br>
+<input type="checkbox" id="conditions-checkbox" required>
+<label for="conditions-checkbox">I agree to the terms and conditions</label>
+<div class="invalid-feedback">You must agree before submitting.</div>
+
+
+	    <button type="submit" style="margin-top:15px;">Submit</button>
+
+
+</form>
 </body>
 
 </html>
