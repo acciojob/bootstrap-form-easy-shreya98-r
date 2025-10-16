@@ -1,55 +1,63 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-	<style>
-
-		 .invalid-feedback {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form</title>
+  <style>
+    .invalid-feedback {
       color: red;
       font-size: 0.9em;
       display: none;
-		 }
-		input:invalid + .invalid-feedback,
+    }
+
+    input:invalid + .invalid-feedback,
     select:invalid + .invalid-feedback {
       display: block;
-
-
-		input[type="checkbox"]:invalid + label + .invalid-feedback {
-  display: block;
-}
-	</style>
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-<form>
-	<label for="first-name-input"> First Name </label>
-	<input type="text" id="first-name-input" required >
-	<div class="invalid-feedback">Please enter a valid first name.</div>
+  <form>
 
-	<br>
-	<label for="last-name-input"> Last Name </label>
-	<input type="text" id="last-name-input" required >
-	<div class="invalid-feedback">Please enter a valid last name.</div>
+    <!-- First Name -->
+    <label for="first-name-input" class="form-label">First Name</label>
+    <input type="text" id="first-name-input" class="form-control" required>
+    <div class="invalid-feedback">Please enter a valid first name.</div>
 
-	<br>
-	 <label for="college-input">College Name</label>
-    <input type="text" id="college-input" name="college" required>
+    <br>
+
+    <!-- Last Name -->
+    <label for="last-name-input" class="form-label">Last Name</label>
+    <input type="text" id="last-name-input" class="form-control" required>
+    <div class="invalid-feedback">Please enter a valid last name.</div>
+
+    <br>
+
+    <!-- Email -->
+    <label for="email-input" class="form-label">Email Address</label>
+    <input type="email" id="email-input" class="form-control" required>
+    <div class="invalid-feedback">Please enter a valid email address.</div>
+
+    <br>
+
+    <!-- College Name -->
+    <label for="college-input" class="form-label">College</label>
+    <input type="text" id="college-input" class="form-control" required>
     <div class="invalid-feedback">Please enter your college name.</div>
 
-  <br>
-    <label for="roll-no-input">Roll Number</label>
-    <input type="number" id="roll-no-input" name="roll-no" required>
+    <br>
+
+    <!-- Roll Number -->
+    <label for="roll-no-input" class="form-label">Roll No.</label>
+    <input type="text" id="roll-no-input" class="form-control" required>
     <div class="invalid-feedback">Please enter a valid roll number.</div>
 
-<br>
-	<label for="graduation-year">Graduation Year</label>
+    <br>
 
-    <select id="graduation-year" name="graduation-year" required>
+    <!-- Graduation Year -->
+    <label for="grad-year-select" class="form-label">Graduation Year</label>
+    <select id="grad-year-select" class="form-select" required>
       <option value="">Select year</option>
       <option value="2020">2020</option>
       <option value="2021">2021</option>
@@ -57,19 +65,17 @@
       <option value="2023">2023</option>
     </select>
     <div class="invalid-feedback">Please select your graduation year.</div>
-		
-	</select>
 
-<br>
-<input type="checkbox" id="conditions-checkbox" required>
-<label for="conditions-checkbox">I agree to the terms and conditions</label>
-<div class="invalid-feedback">You must agree before submitting.</div>
+    <br>
 
+    <!-- Conditions Checkbox -->
+    <input type="checkbox" id="conditions-checkbox" class="form-check-input" required>
+    <label for="conditions-checkbox" class="form-label">Agree to terms and conditions</label>
+    <div class="invalid-feedback">You must agree before submitting.</div>
 
-	    <button type="submit" style="margin-top:15px;">Submit</button>
+    <br><br>
 
-
-</form>
+    <button type="submit">Submit</button>
+  </form>
 </body>
-
 </html>
